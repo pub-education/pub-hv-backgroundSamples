@@ -40,3 +40,17 @@
     Det finns naturligtvis fler varianter där man kan anvnda z-index för att placera saker i z led dvs framför och bakom.
     Hoppas det var till lite hjälp. Är det något annat ni undrar så hör av er.
 */
+.content-wrapper {
+  width: 400px;
+  border: 3px groove royalblue;
+  margin-top: 2rem;
+}
+/* Sätt padding för alla p element. */
+p {
+  padding: 1rem 2rem;
+}
+.page-wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
