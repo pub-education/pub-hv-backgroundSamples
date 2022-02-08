@@ -1,0 +1,17 @@
+.background {
+  background-image: linear-gradient(rgba(255, 0, 0, 0.3), rgba(0, 255, 0, 0.3)),
+    url("../images/world-map.jpg");
+  background-size: contain;
+}
+
+.background2 {
+  position: relative;
+  overflow: hidden;
+}
+.background2 p {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: radial-gradient(rgba(255, 255, 0, 0.4), rgba(0, 0, 255, 0.4));
+  height: 100%;
+}
