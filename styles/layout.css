@@ -1,13 +1,33 @@
+/*
+    Metod 1 
+    Vi använder en array av background-image. Den sista hamnar i botten och den första ovanpå.
+    För att kartan under skall synas så behöver vi göra färgerna något transparanta och det gör vi med att
+    sätta alpha värdet till 0.3 här på både röda och gröna färgen.
+    ref: https://developer.mozilla.org/en-US/docs/Web/CSS/background-image
+    ref: https://developer.mozilla.org/en-US/docs/Web/CSS/background-size
+*/
 .background {
   background-image: linear-gradient(rgba(255, 0, 0, 0.3), rgba(0, 255, 0, 0.3)),
     url("../images/world-map.jpg");
-  background-size: contain;
+  background-size: contain; /* Gör så att hela bilden syns */
 }
 
+/*
+    Metod 2
+    Här använder vi först position: relative så att vi kan placera texten inom den omslutande diven med class=background2.
+    Vi döljer också den överskjutande texten så det ser renare ut.
+*/
 .background2 {
   position: relative;
   overflow: hidden;
 }
+/*
+    Här använder vi position: absolute fär att placera texten högst up och till vänster i omslutande div element.
+    Sedan sätter vi en bakgrund fär som är något transparant med hjälp av alpha värdet 0.4.
+    ref: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning
+    ref: https://developer.mozilla.org/en-US/docs/Web/CSS/position
+    ref: https://www.w3schools.com/css/css_background.asp
+*/
 .background2 p {
   position: absolute;
   top: 0px;
@@ -15,3 +35,8 @@
   background: radial-gradient(rgba(255, 255, 0, 0.4), rgba(0, 0, 255, 0.4));
   height: 100%;
 }
+
+/*
+    Det finns naturligtvis fler varianter där man kan anvnda z-index för att placera saker i z led dvs framför och bakom.
+    Hoppas det var till lite hjälp. Är det något annat ni undrar så hör av er.
+*/
